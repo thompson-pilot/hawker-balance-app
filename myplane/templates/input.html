@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<div class="grid-container">
+<div class="grid-40">
+<div class="conteudo-left">
+
+
+<h2>Weight and Balance - Hawker 850xp</h2>
+<p>
+	Enter below your aircraft marks and type,<br>
+Basic Operational Weight and its moment.</p>
+
+<form action="balan" method="POST">
+    {% csrf_token %}
+    <p>Departure: <input type="text" name="depart"></p>
+    <p>Destination: <input type="text" name="dest"></p>
+    <p>Marks: <input type="text" name="marks"></p>
+    <p>Type: <input type="text" name="tipo"></p>
+    <p>BOW: <input type="text" name="bow"></p>
+    <p>BOW Moment: <input type="text" name="bow_mom"></p>
+    <p class="space">Enter below all weights in pounds.<br>
+    For places without passengers enter 0 (zero)</p>
+    <p>Pax1: <input type="text" name="pax1"></p>
+    <p>Pax2: <input type="text" name="pax2"></p>
+    <p>Pax3: <input type="text" name="pax3"></p>
+    <p>Pax4: <input type="text" name="pax4"></p>
+    <p>Pax5: <input type="text" name="pax5"></p>
+    <p>Pax6: <input type="text" name="pax6"></p>
+    <p>Pax7: <input type="text" name="pax7"></p>
+    <p>Pax8: <input type="text" name="pax8"></p>
+    <p>Pax9: <input type="text" name="pax6"></p>
+    <p>Bagg1: <input type="text" name="bgg1"></p>
+    <p>Bagg2: <input type="text" name="bgg2"></p>
+
+    <p class="space">============= FUEL =============</p>
+    <p>The rate is: gls x 6.66 = lbs</p>
+
+    <p class="space">For wing parcial use minimum of 120 gallons<br>and maximum of 1263 gallons for wing full.</p>
+
+    <p>Enter Wing Fuel in gallons: <input type="text" name="fueled"></p>
+
+    <p class="space">If Ventral tank will be used enter 1496 lbs of Fuel or 0 if not.</p>
+
+    <p>Enter Ventral Fuel in pounds: <input type="text" name="ventral"></p>
+
+    <p>Enter Trip Fuel: <input type="text" name="trip"></p>
+
+    <input type="submit">
+</form>
+</div>
+</div>
+</div>
+<div class="grid-60">
+<div class="conteudo-right">
+<img src="{% static 'img/configuracao.png' %}" />
+
+<h3>Basic Operatinal Weight</h3>
+<p>The empty weight of the aircraft plus the weight of <br>the required crew, their baggage and other standard item such as meals and potable water.
+</p>
+</div>
+</div>
+
+{% endblock content%}

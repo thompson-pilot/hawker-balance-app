@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+
+{% block content %}
+
+<div class="grid-container">
+<div class="grid-60">
+<div class="conteudo-left">
+
+<div id="current_date">
+<script>
+document.getElementById("current_date").innerHTML = Date();
+</script>
+</div>
+<h3>Departure Airport: {{depart}}</h3>
+<h3>Destination Airport: {{dest}}</h3>
+
+<h3 class="h3_aircraft">Aircraft data</h3>
+<p>Marks: {{ marks }}</p>
+<p>Type: {{ tipo }}</p>
+<p>BOW: {{ bow }}</p>
+<p>BOW Moment: {{ bow_mom }}</p>
+<h3 class="h3_aircraft">Limitations</h3>
+<ul>
+<li>BOW: 16600</li>
+<li>MRW......28.120</li>
+<li>MTW......28.000</li>
+<li>MZFW.....18.450</li>
+<li>MLW......23.350</li>
+<li>Taxi Fuel...120lbs</li>
+</ul>
+<h3>Loading</h3>
+<p>Passangers: {{pax}}</p>
+<p>Cargo: {{cargo}}</p>
+<p><strong>Zero Fuel Weight:</strong> {{zfw}} (maximum 18.450)</p>
+<p>Wing Fuel: {{ wing_parcial }} lbs</p>
+<p>Ventral Fuel: {{ ventral }}</p>
+<p>Takeoff Fuel: {{ to_fuel }}</p>
+<p><strong>Takeoff Weight: {{ to_weight }}</strong></p>
+<p>Trip Fuel: {{ trip }}</p>
+<p>Landing Fuel: {{ld_fuel}}</p>
+<p><strong>Landing Weight: {{ ld_weight }}</strong></p>
+<p>CG: {{ to_cg }}</p>
+<p> Takeoff Trim: {{ trim }}</p>
+
+</div>
+</div>
+<div class="conteudo-right">
+<img src="{% static 'img/grafico_reduzido.png' %}" />
+</div>
+</div>
+
+
+{% endblock content%}
