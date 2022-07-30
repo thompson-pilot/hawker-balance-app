@@ -2,20 +2,17 @@
 	float: left;
 }
 
-
 .conteudo-left {
 	float: left;
 }
-
-
 
 body{
 	  margin-top: 30px;
 	  margin-left: 50px;
 	  background-color: lightgray;
-      font-family: Arial;
-      font-size: .9em;
-     }
+    font-family: Arial;
+    font-size: .9em;
+  }
 
 p {
       margin: 4px;
@@ -27,35 +24,31 @@ p {
      font-weight: bold;
   }
 
-    #current_date {
-      margin-bottom: 10px;
-      font-size: 17Px;
-    }
-     h3 {
-      margin: 0;
+#current_date {
+    margin-bottom: 10px;
+    font-size: 17Px;
+  }
+  h3 {
+     margin: 0;
+     }
 
-     }
-     h4 {
+  h4 {
       margin: 0;
      }
-     h1 {
+  h1 {
       margin-bottom: 5px;
      }
 
-     img {
+img {
       margin-top: 40px;
-      width: 650px;
+      width: 600px;
       height: auto;
      }
 
-     .h3_aircraft {
+.h3_aircraft {
      	margin-top: 6px;
      }
 
-     .img_space {
+.img_space {
      	margin-top: 40px;
      }
-
-    
-
-
