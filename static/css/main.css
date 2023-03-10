@@ -1,15 +1,15 @@
 .conteudo-right {
-	float: left;
+    float: left;
 }
 
 .conteudo-left {
-	float: left;
+    float: left;
 }
 
 body{
-	  margin-top: 30px;
-	  margin-left: 50px;
-	  background-color: lightgray;
+      margin-top: 30px;
+      margin-left: 50px;
+      background-color: lightgray;
     font-family: Arial;
     font-size: .9em;
   }
@@ -28,6 +28,8 @@ p {
     margin-bottom: 10px;
     font-size: 17Px;
   }
+
+
   h3 {
      margin: 0;
      }
@@ -41,14 +43,15 @@ p {
 
 img {
       margin-top: 40px;
+      margin-bottom: 20px;
       width: 600px;
       height: auto;
      }
 
 .h3_aircraft {
-     	margin-top: 6px;
+        margin-top: 6px;
      }
 
 .img_space {
-     	margin-top: 40px;
+        margin-top: 40px;
      }

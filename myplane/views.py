@@ -20,6 +20,7 @@ def weightBalance(request):
 	pax7 = 'pax7' in request.POST and request.POST['pax7']
 	pax8 = 'pax8' in request.POST and request.POST['pax8']
 	pax9 = 'pax9' in request.POST and request.POST['pax9']
+	# baggage
 	bgg1 = 'bgg1' in request.POST and request.POST['bgg1']
 	bgg2 = 'bgg2' in request.POST and request.POST['bgg2']
 
@@ -39,7 +40,6 @@ def weightBalance(request):
 
 	pax = p1+p2+p3+p4+p5+p6+p7+p8+p9
 	cargo = b1 + b2
-
 	zfw = b + pax + cargo
 
 
@@ -223,6 +223,7 @@ def weightBalance(request):
 
 	to_cg = truncate(cg)
 
+	
 	context = {'marks':marks, 'tipo':tipo, 'bow':bow, 'bow_mom':bow_mom, 'zfw':zfw, 'fueled':fueled, 'ventral':ventral, 'trip':trip, 'to_fuel':to_fuel, 'to_weight':to_weight, 'ld_fuel':ld_fuel, 'ld_weight':ld_weight, 'to_cg':to_cg, 'trim':trim, 'depart':depart, 'dest':dest, 'total_mom':total_mom, 'minus_moments':minus_moments, 'plus_moments':plus_moments, 'bagg1_mom':bagg1_mom, 'bagg2_mom':bagg2_mom, 'pax':pax, 'cargo':cargo, 'plus_wing_parcial_mom':plus_wing_parcial_mom, 'minus_wing_parcial_mom':minus_wing_parcial_mom, 'bgg1':bgg1, 'bgg2':bgg2, 'wing_parcial':wing_parcial}
 	return render(request, "result.html", context)
 	

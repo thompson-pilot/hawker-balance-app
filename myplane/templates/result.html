@@ -43,11 +43,12 @@ document.getElementById("current_date").innerHTML = Date();
 <p><strong>Landing Weight: {{ ld_weight }}</strong></p>
 <p>CG: {{ to_cg }}</p>
 <p> Takeoff Trim: {{ trim }}</p>
+</div>
+</div>
 
-</div>
-</div>
 <div class="conteudo-right">
 <img src="{% static 'img/grafico_reduzido.png' %}" />
+<a style="text-decoration: none; color:black;" href="{% url 'index' %}"><h3>&lt;&lt; Back to Start</h3></a>
 </div>
 </div>
 {% endblock content%}
