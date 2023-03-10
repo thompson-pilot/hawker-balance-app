@@ -20,6 +20,7 @@ IS_HEROKU = "DYNO" in os.environ
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 import environ
+
 env = environ.Env()
 environ.Env.read_env()
 

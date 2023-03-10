@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'unsemantic-grid-responsive.css' %}">
+<script src="{% static '/js/no_enter.js' %}"></script>
 <title>Weight and Balance</title>
 </head>
 <body>
@@ -14,7 +15,4 @@
 {% endblock content%}
 </body>
 
-<script type="text/javascript">
-window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
-</script>
 </html>

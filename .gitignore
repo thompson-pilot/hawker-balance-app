@@ -2,4 +2,5 @@
 __pycache
 db.sqlite3
 newenv
+requirements.in
 
