@@ -29,7 +29,7 @@ SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if IS_HEROKU:
-    ALLOWED_HOSTS = ["https://thom-hawker.herokuapp.com", "localhost", "127.0.0.1"]
+    ALLOWED_HOSTS = [".herokuapp.com", "localhost", "127.0.0.1"]
 else:
     ALLOWED_HOSTS = []
 
