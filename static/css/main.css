@@ -1,3 +1,8 @@
+.button:hover {
+    background-color: grey;
+    color: white;
+}
+
 .conteudo-right {
     float: left;
 }
