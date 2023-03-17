@@ -12,8 +12,8 @@
 
             <h2>Weight and Balance - Hawker 850xp</h2>
             <p class="space">
-                Enter below your aircraft marks and type,<br>
-                Basic Operational Weight and its moment.</p>
+                Enter below your aircraft marks and type<br>
+                and the Basic Operational Weight.</p>
 
             <form action="balan" method="POST">
                 {% csrf_token %}
@@ -22,11 +22,11 @@
                 <p>Marks: <input type="text" name="marks"></p>
                 <p>Type: <input type="text" name="tipo"></p>
                 <p>BOW: <input type="text" min="0" oninput="this.value = Math.abs(this.value)" name="bow"></p>
-                <p>BOW Moment: <input type="text" min="0" oninput="this.value = Math.abs(this.value)" name="bow_mom">
+                
                 </p>
                 <p class="space">Enter below all weights in pounds.<br>
                     For those seats without passengers enter 0 (zero)</p>
-                <p>Pax1: <input type="number" min="0" oninput="this.value = Math.abs(this.value)" name="pax1"></p>
+                <p>Pax1: <input type="text" min="0" oninput="this.value = Math.abs(this.value)" name="pax1"></p>
                 <p>Pax2: <input type="text" min="0" oninput="this.value = Math.abs(this.value)" name="pax2"></p>
                 <p>Pax3: <input type="text" min="0" oninput="this.value = Math.abs(this.value)" name="pax3"></p>
                 <p>Pax4: <input type="text" min="0" oninput="this.value = Math.abs(this.value)" name="pax4"></p>

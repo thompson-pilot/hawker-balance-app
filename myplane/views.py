@@ -12,7 +12,7 @@ def weightBalance(request):
     marks = "marks" in request.POST and request.POST["marks"]
     tipo = "tipo" in request.POST and request.POST["tipo"]
     bow = "bow" in request.POST and request.POST["bow"]
-    bow_mom = "bow_mom" in request.POST and request.POST["bow_mom"]
+   
     pax1 = "pax1" in request.POST and request.POST["pax1"]
     pax2 = "pax2" in request.POST and request.POST["pax2"]
     pax3 = "pax3" in request.POST and request.POST["pax3"]
@@ -172,7 +172,7 @@ def weightBalance(request):
     trip = int(trip)
     wing_parcial = round(int(fueled) * float(6.66))
     ventral = int(ventral)
-    to_fuel = wing_parcial + ventral - 120
+    to_fuel = wing_parcial + ventral
     to_weight = to_fuel + zfw
     ld_fuel = to_fuel - trip
     ld_weight = to_weight - trip
@@ -181,7 +181,7 @@ def weightBalance(request):
     rh_row_one_arm = float(-8.80)
     lh_row_two_arm = float(-5.68)
     rh_row_two_arm = float(-5.68)
-    lh_sette_front_arm = float(-2.50)
+    lh_sette_front_arm = float(-3.48)
     rh_row_four_arm = float(-0.64)
     lh_settee_center_arm = float(-0.70)
     lh_settee_rear_arm = float(1.16)
@@ -218,6 +218,9 @@ def weightBalance(request):
         + float(bagg1_mom)
     )
 
+    before_round = b * float(0.6614)
+    bow_mom = round(before_round)
+
     plus_moments = (
         float(plus_wing_parcial_mom)
         + float(ventral_fuel_mom)
@@ -242,7 +245,7 @@ def weightBalance(request):
         "marks": marks,
         "tipo": tipo,
         "bow": bow,
-        "bow_mom": bow_mom,
+        #"bow_mom": bow_mom,
         "zfw": zfw,
         "fueled": fueled,
         "ventral": ventral,
