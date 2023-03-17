@@ -151,8 +151,10 @@ def weightBalance(request):
         plus_wing_parcial_mom = 2086
     elif int(fueled) == 1120 or int(fueled) < 1140:
         plus_wing_parcial_mom = 2409
-    elif int(fueled) == 1140 or int(fueled) < 1160:
+    elif int(fueled) == 1140 or int(fueled) < 1150:
         plus_wing_parcial_mom = 2743
+    elif int(fueled) == 1153:
+        plus_wing_parcial_mom = 2930
     elif int(fueled) == 1160 or int(fueled) < 1180:
         plus_wing_parcial_mom = 3077
     elif int(fueled) == 1180 or int(fueled) < 1200:
